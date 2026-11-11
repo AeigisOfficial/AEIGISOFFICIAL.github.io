@@ -4,42 +4,167 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AEIGIS | The Shield of Sovereignty</title>
-    <!-- Complete responsive CSS styling with Obsidian and Gold theme omitted for brevity in summary, full code available in source -->
+    
+    <!-- 
+      [INTERNAL SYSTEM CONFIGURATION PROFILE]
+      TARGET SYSTEM NODE: aeigis.org / aeigis.store
+      OFFICIAL CHANNELS: X & YouTube @AEIGISOFFICIAL
+      CHAIRMAN & CEO: KHALEEL ZUGHBIEH (+1-607-307-5355 VERIZON REGION)
+      ETHICAL OPERATIONAL MATRICES: Strict Halal & Parve Clean Business Guidelines
+    -->
+
+    <style>
+        :root {
+            --bg-color: #05070f;
+            --text-color: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-gold: #d4af37;
+            --gold-glow: rgba(212, 175, 55, 0.15);
+            --slate-deep: #0f172a;
+            --card-bg: #0b1120;
+            --border-color: #1e293b;
+            --border-accent: #334155;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(30, 41, 59, 0.3) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(15, 23, 42, 0.3) 0px, transparent 50%);
+            color: var(--text-color);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            letter-spacing: -0.01em;
+        }
+
+        .container { max-width: 760px; margin: 0 auto; padding: 60px 0; }
+        header { text-align: center; margin-bottom: 60px; position: relative; }
+
+        .brand-crest {
+            width: 80px; height: 90px; margin: 0 auto 24px auto; position: relative;
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border: 2px solid var(--accent-gold);
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            box-shadow: 0 0 30px var(--gold-glow);
+            display: flex; align-items: center; justify-content: center;
+        }
+
+        .brand-crest::after {
+            content: 'A'; font-family: 'Courier New', monospace; font-weight: 900;
+            font-size: 32px; color: var(--accent-gold); text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+        }
+
+        h1 { font-size: 2.2rem; font-weight: 800; color: var(--text-color); letter-spacing: 6px; margin-bottom: 8px; text-transform: uppercase; }
+        .subtitle { color: var(--accent-gold); font-size: 0.85rem; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; opacity: 0.9; margin-bottom: 20px; }
+
+        /* Custom Audio Control Elements */
+        .audio-player-container {
+            margin: 20px auto 0 auto;
+            max-width: 200px;
+            text-align: center;
+        }
+        .audio-btn {
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid var(--accent-gold);
+            color: var(--accent-gold);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .audio-btn:hover {
+            background: var(--accent-gold);
+            color: var(--bg-color);
+            box-shadow: 0 0 15px var(--gold-glow);
+        }
+
+        .manifesto-box {
+            background-color: var(--card-bg); border: 1px solid var(--border-color);
+            border-radius: 12px; padding: 40px; margin-bottom: 35px; box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+            position: relative; overflow: hidden;
+        }
+
+        .manifesto-box::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%;
+            background: linear-gradient(to bottom, var(--accent-gold), #785c18);
+        }
+
+        .manifesto-box p { margin-bottom: 20px; font-size: 1.05rem; color: #cbd5e1; text-align: justify; }
+        .manifesto-box p:last-child { margin-bottom: 0; }
+
+        .extended-specs {
+            background-color: var(--slate-deep); border: 1px solid var(--border-color);
+            border-radius: 12px; padding: 35px; margin-bottom: 45px; box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        .extended-specs h2 { color: var(--accent-gold); font-size: 1.1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; border-bottom: 1px solid var(--border-color); padding-bottom: 12px; }
+        .extended-specs ul { list-style: none; }
+        .extended-specs li { margin-bottom: 16px; color: #94a3b8; font-size: 0.95rem; padding-left: 20px; position: relative; }
+        .extended-specs li::before { content: '▪'; position: absolute; left: 0; color: var(--accent-gold); }
+
+        .catalog-headline { text-align: center; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 3px; color: var(--accent-gold); margin: 40px 0 25px 0; font-weight: 700; }
+        .grid { display: grid; grid-template-columns: 1fr; gap: 25px; margin-bottom: 40px; }
+
+        .product-card {
+            background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 40px;
+            display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            position: relative; background: linear-gradient(180deg, var(--card-bg) 0%, rgba(11, 17, 32, 0.8) 100%);
+        }
+
+        .product-card::after {
+            content: ''; position: absolute; inset: 0; border-radius: 12px; border: 1px solid transparent;
+            background: linear-gradient(180deg, var(--border-accent), transparent) border-box;
+            mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0); mask-composite: exclude; pointer-events: none;
+        }
+
+        .product-meta { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 15px; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; }
+        .product-title { font-size: 1.15rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--text-color); }
+        .product-price { font-size: 2rem; color: var(--accent-gold); font-weight: 800; font-family: monospace; }
+        .product-desc { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 30px; text-align: justify; }
+
+        .btn {
+            display: block; text-align: center; background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+            color: var(--accent-gold); border: 1px solid var(--accent-gold); padding: 16px 30px; border-radius: 6px;
+            text-decoration: none; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; font-size: 0.9rem;
+            transition: all 0.2s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn:hover { background: var(--accent-gold); color: var(--bg-color); box-shadow: 0 0 20px var(--gold-glow); transform: translateY(-1px); }
+        
+        footer { text-align: center; color: #475569; font-size: 0.85rem; margin-top: 80px; border-top: 1px solid var(--border-color); padding-top: 30px; }
+        footer p:first-child { color: var(--text-muted); font-weight: 600; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 1px; }
+    </style>
+    <!-- Payhip Core Script Integration -->
+    <script type="text/javascript" src="https://payhip.com"></script>
 </head>
 <body>
+
     <div class="container">
         <header>
             <div class="brand-crest"></div>
             <h1>AEIGIS</h1>
             <div class="subtitle">Sovereignty • Resilience • One Love</div>
+            
+            <!-- Hidden Loop Player Element -->
+            <audio id="bgPlayer" src="Restart.m4a" autoplay loop prefetch></audio>
+            <div class="audio-player-container">
+                <button id="audioToggle" class="audio-btn" onclick="toggleAudio()">Mute Stream</button>
+            </div>
         </header>
 
         <section class="manifesto-box">
             <p><strong>The Mainframe Crashed in Seattle. The Fortress Is Building in Central New York.</strong></p>
-            <p>Following a medical stroke in March 2026, the creator returned from Seattle to Central New York to focus on healing, self-reliance, and independent art production. The platform champions universal human sovereignty, clean peace, and transparency.</p>
+            <p>In March 2026, a severe stroke left my left side paralyzed thousands of miles from home. I was living out in Seattle, working on the front lines as a Counselor, dedicating my life and my mind to giving back and holding up people who were broken. When the emergency hit, I was completely alone. I could barely walk unassisted and had to move back home to Central New York for direct family support.</p>
+            <p>I have done zero public fundraising or charity requests—I have just been quietly healing and trying to scrape by since my work stopped in March and my short-term disability insurance pay ended in June. Now, I am standing up to earn my living directly through my talents. People have been asking me to drop a full album for years, and I am putting my raw energy into answering that demand.</p>
+            <p>Due to physical recovery constraints, live performances are currently looking like they are about 18 months to 2 years out. But if the demand is there, and God clears me—which I know we will be strong through Faith—I am fully committed to a tour. Please like, support, share, email, and join our VIP fan club. Support my stroke recovery through these complications, and help me provide a platform to hopefully give back once I heal over the years.</p>
+            <p>My paternal lineage carries the heavy history of Palestinian refugee exile, but my spirit belongs to universal human sovereignty. We do not play geopolitical games or pick sides in corporate lines. One Love is not a cheap slogan; it is a structural necessity. We demand clean peace for every child of the soil, across every border, without compromise. Welcome to the shield.</p>
         </section>
 
-        <div class="catalog-headline">Official Release Catalog</div>
-        <div class="grid">
-            <div class="product-card">
-                <div class="product-title">★ THE RESTART MASTER PACKAGE ($4.44)</div>
-                <a href="https://payhip.com" class="btn payhip-buy-button" target="_blank">Secure Master Package</a>
-            </div>
-            <div class="product-card">
-                <div class="product-title">★ SOVEREIGN VIP FAN CLUB (ANNUAL PASS) ($40.00)</div>
-                <a href="https://payhip.com" class="btn payhip-buy-button" target="_blank">Secure Annual Pass</a>
-            </div>
-            <div class="product-card">
-                <div class="product-title">★ THE SOVEREIGN EXECUTIVE NODE ($444.00)</div>
-                <a href="https://payhip.com" class="btn payhip-buy-button" target="_blank">Secure Executive Node</a>
-            </div>
-        </div>
-
-        <footer>
-            <p>Enforced Data Transparency</p>
-            <p>Verify our perimeters directly at: <strong>aeigis.org</strong> or <strong>aeigis.store</strong>.</p>
-        </footer>
-    </div>
-    <script type="text/javascript" src="https://payhip.com"></script>
-</body>
-</html>
+        <section class="extended-specs">

@@ -29,6 +29,36 @@
         .manifesto-box { background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 30px; margin-bottom: 40px; border-left: 4px solid var(--accent-gold); }
         .manifesto-box p { margin-bottom: 15px; font-size: 1.1rem; color: #cbd5e1; }
         .manifesto-box p:last-child { margin-bottom: 0; }
+        
+        .extended-specs {
+            background-color: #0f172a;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 40px;
+        }
+        .extended-specs h2 {
+            color: var(--accent-gold);
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+        .extended-specs ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .extended-specs li {
+            margin-bottom: 12px;
+            color: #cbd5e1;
+            font-size: 1rem;
+        }
+        .extended-specs li strong {
+            color: var(--text-color);
+        }
+
         .grid { display: grid; grid-template-columns: 1fr; gap: 25px; margin-bottom: 40px; }
         @media (min-width: 600px) { .grid { grid-template-columns: 1fr 1fr; } }
         .product-card { background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 30px; display: flex; flex-direction: column; justify-content: space-between; transition: border-color 0.3s ease; }
@@ -80,6 +110,17 @@
             <p>Welcome to the shield.</p>
         </section>
 
+        <!-- Extended Description Section -->
+        <section class="extended-specs">
+            <h2>Ecosystem Architecture Blueprint</h2>
+            <ul>
+                <li>📊 <strong>The Thanksgiving LP Nodes:</strong> A cohesive 10-track sonic manifest fusing high-density, multi-syllabic classical street rap with custom engineered 1970s analog funk samples and dark nocturnal sub-bass frequencies.</li>
+                <li>🏛️ <strong>The Resiliency Manifesto:</strong> A zero-overhead structural operations plan focused on strategic re-entry tracking, clinical mental-hygiene routines, and breaking localized administrative complacency.</li>
+                <li>📝 <strong>The Interactive Grids:</strong> Built-in metrics templates, daily output tracking logs, and self-auditing frameworks designed to isolate your execution from institutional noise.</li>
+                <li>🛡️ <strong>Absolute Data Sovereignty:</strong> This domain operates with zero external scripts, zero advertising tracking pixels, and zero user-activity logs to protect your ultimate digital perimeter.</li>
+            </ul>
+        </section>
+
         <div class="grid">
             <!-- Thanksgiving Pre-Order Card -->
             <div class="product-card" style="border: 2px solid var(--accent-gold); grid-column: 1 / -1;">
@@ -119,13 +160,3 @@
                     <div class="product-desc">Join the inner perimeter. Unlocks the monthly Intel newsletter, custom name shout-outs on the outros of upcoming track drops, and automatic entry into our monthly workbook contests.</div>
                 </div>
                 <a href="PASTE_YOUR_SUBSTACK_FAN_CLUB_LINK" class="btn" target="_blank">Join the Inner Perimeter</a>
-            </div>
-        </div>
-
-        <footer class="statement">
-            <p>To preserve complete data sovereignty and human privacy, this ecosystem uses <strong>zero tracking links</strong>.</p>
-            <p>Type <strong>aeigis.store</strong> directly into your browser navigation window to verify our perimeter. Peace and blessings.</p>
-        </footer>
-    </div>
-</body>
-</html>

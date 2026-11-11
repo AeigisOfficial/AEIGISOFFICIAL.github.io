@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEIGIS | The Shield of Sovereignty</title>
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --text-color: #f1f5f9;
+            --accent-gold: #d4af37;
+            --slate-blue: #1e293b;
+            --card-bg: #111827;
+            --border-color: #334155;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+        header { text-align: center; margin-bottom: 60px; }
+        .shield-logo { font-family: monospace; white-space: pre; color: var(--accent-gold); line-height: 1.2; margin-bottom: 20px; font-size: 14px; }
+        h1 { font-size: 2.5rem; letter-spacing: 2px; margin-bottom: 10px; text-transform: uppercase; }
+        .subtitle { color: var(--accent-gold); font-size: 1.1rem; letter-spacing: 1px; text-transform: uppercase; }
+        .manifesto-box { background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 30px; margin-bottom: 40px; border-left: 4px solid var(--accent-gold); }
+        .manifesto-box p { margin-bottom: 15px; font-size: 1.1rem; color: #cbd5e1; }
+        .manifesto-box p:last-child { margin-bottom: 0; }
+        .grid { display: grid; grid-template-columns: 1fr; gap: 25px; margin-bottom: 40px; }
+        @media (min-width: 600px) { .grid { grid-template-columns: 1fr 1fr; } }
+        .product-card { background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 30px; display: flex; flex-direction: column; justify-content: space-between; transition: border-color 0.3s ease; }
+        .product-card:hover { border-color: var(--accent-gold); }
+        .product-title { font-size: 1.2rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+        .product-price { font-size: 1.8rem; color: var(--accent-gold); font-weight: bold; margin-bottom: 15px; }
+        .product-desc { color: #94a3b8; font-size: 0.95rem; margin-bottom: 25px; flex-grow: 1; }
+        .btn { display: block; text-align: center; background-color: transparent; color: var(--accent-gold); border: 1px solid var(--accent-gold); padding: 12px 20px; border-radius: 4px; text-decoration: none; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition: all 0.3s ease; cursor: pointer; }
+        .btn:hover { background-color: var(--accent-gold); color: var(--bg-color); }
+        .statement { text-align: center; color: #64748b; font-size: 0.9rem; margin-top: 60px; border-top: 1px solid var(--border-color); padding-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="shield-logo">
+               /\
+              /  \
+             / /\ \
+
+            | |  | |
+   _________| |__| |_________
+  /\                         /\
+ /  \       /=======\       /  \
+
+|    |     /  \   /  \     |    |
+|    |    |   /   \   |    |    |
+|    |     \  /   \  /     |    |
+ \  /       \=======/       \  /
+  \/___________|A|___________\/
+
+               |E|
+               |I|
+               |G|
+               |I|
+               |S|
+               \_/
+            </div>
+            <h1>AEIGIS</h1>
+            <div class="subtitle">Sovereignty • Resilience • One Love</div>
+        </header>
+
+        <section class="manifesto-box">
+            <p><strong>The Mainframe Crashed in Seattle. The Fortress Got Built in CNY.</strong></p>
+            <p>In March 2026, a severe stroke left my left side paralyzed thousands of miles from home. When you cannot walk, the ground vanishes. The job goes. Your accounts hit negative digits. Your medical insurance cancels because COBRA is an unaffordable trap, leaving you with an $8,500 maximum out-of-pocket liability.</p>
+            <p>The heaviest weight wasn't the debt. It was navigating a system with limited help where the people in these fields are so often cold. It was the silence of sitting benched by reality, unable to send my daughter a single dollar while she packed her bags to start her freshman year of college.</p>
+            <p>But I never asked for charity. I am building my own door. I am dropping my art, my music, and my workbooks right now to raise my own money, stand back up on my own two feet, and build an independent brand that will eventually create real access and survival infrastructure for others stuck in the dark.</p>
+            <p>I am strictly pro-human. My maternal lineage carries the heavy history of Palestinian refugee exile, but my spirit belongs to universal human sovereignty. I am not here to play geopolitical games or pick a side in the grids of Palestine or Israel. One Love is not a cheap slogan; it is a structural necessity. We demand clean peace for every child of the soil, across every border, without compromise.</p>
+            <p>Welcome to the shield.</p>
+        </section>
+
+        <div class="grid">
+            <!-- Thanksgiving Pre-Order Card -->
+            <div class="product-card" style="border: 2px solid var(--accent-gold); grid-column: 1 / -1;">
+                <div>
+                    <div class="product-title" style="color: var(--accent-gold);">★ THE 4 KINGS (FULL ALBUM PRE-ORDER)</div>
+                    <div class="product-price">$8.00</div>
+                    <div class="product-desc">Secure the full 10-track concept LP dropping this Thanksgiving. High-fidelity digital analog-purified master catalog download link sent directly to your email upon release. Complete data sovereignty—zero tracking.</div>
+                </div>
+                <a href="PASTE_YOUR_SUBSTACK_ALBUM_PREORDER_LINK" class="btn" target="_blank">Pre-Order Full LP</a>
+            </div>
+
+            <!-- Single 1 Card -->
+            <div class="product-card">
+                <div>
+                    <div class="product-title">Track 1: The Fourth King</div>
+                    <div class="product-price">$0.88</div>
+                    <div class="product-desc">Immediate digital download of the first official single. Luxurious multi-syllabic street density over an underground Afro-Arab house loop. Features the raw, unvarnished 16-bar survival spoken-word finale.</div>
+                </div>
+                <a href="PASTE_YOUR_SUBSTACK_TRACK1_LINK" class="btn" target="_blank">Download Single</a>
+            </div>
+
+            <!-- Single 2 Card -->
+            <div class="product-card">
+                <div>
+                    <div class="product-title">Track 2: Not Asking the Dark</div>
+                    <div class="product-price">$0.88</div>
+                    <div class="product-desc">Immediate digital download of the second official single. Intricate, rapid, pocket-locked rhythmic street authority driven by syncopated tribal house percussion and acoustic guitar undertones.</div>
+                </div>
+                <a href="PASTE_YOUR_SUBSTACK_TRACK2_LINK" class="btn" target="_blank">Download Single</a>
+            </div>
+
+            <!-- Fan Club Card -->
+            <div class="product-card" style="grid-column: 1 / -1;">
+                <div>
+                    <div class="product-title">Sovereign Fan Club VIP Membership</div>
+                    <div class="product-price">$4.00 / mo</div>
+                    <div class="product-desc">Join the inner perimeter. Unlocks the monthly Intel newsletter, custom name shout-outs on the outros of upcoming track drops, and automatic entry into our monthly workbook contests.</div>
+                </div>
+                <a href="PASTE_YOUR_SUBSTACK_FAN_CLUB_LINK" class="btn" target="_blank">Join the Inner Perimeter</a>
+            </div>
+        </div>
+
+        <footer class="statement">
+            <p>To preserve complete data sovereignty and human privacy, this ecosystem uses <strong>zero tracking links</strong>.</p>
+            <p>Type <strong>aeigis.store</strong> directly into your browser navigation window to verify our perimeter. Peace and blessings.</p>
+        </footer>
+    </div>
+</body>
+</html>

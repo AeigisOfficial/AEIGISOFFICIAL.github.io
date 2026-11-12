@@ -4,15 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AEIGIS | The Shield of Sovereignty</title>
-    
-    <!-- 
-      [INTERNAL SYSTEM CONFIGURATION PROFILE]
-      TARGET SYSTEM NODE: aeigis.org / aeigis.store
-      OFFICIAL CHANNELS: X & YouTube @AEIGISOFFICIAL
-      CHAIRMAN & CEO: KHALEEL ZUGHBIEH (+1-607-307-5355 VERIZON REGION)
-      ETHICAL OPERATIONAL MATRICES: Strict Halal & Parve Clean Business Guidelines
-    -->
-
     <style>
         :root {
             --bg-color: #05070f;
@@ -23,44 +14,21 @@
             --slate-deep: #0f172a;
             --card-bg: #0b1120;
             --border-color: #1e293b;
-            --border-accent: #334155;
         }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
             background-color: var(--bg-color);
-            background-image: 
-                radial-gradient(at 0% 0%, rgba(30, 41, 59, 0.3) 0px, transparent 50%),
-                radial-gradient(at 100% 100%, rgba(15, 23, 42, 0.3) 0px, transparent 50%);
             color: var(--text-color);
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             line-height: 1.6;
             padding: 20px;
-            letter-spacing: -0.01em;
         }
-
-        .container {
-            max-width: 760px;
-            margin: 0 auto;
-            padding: 60px 0;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 60px;
-            position: relative;
-        }
-
+        .container { max-width: 760px; margin: 0 auto; padding: 50px 0; }
+        header { text-align: center; margin-bottom: 50px; }
         .brand-crest {
             width: 80px;
             height: 90px;
             margin: 0 auto 24px auto;
-            position: relative;
             background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
             border: 2px solid var(--accent-gold);
             clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
@@ -69,268 +37,179 @@
             align-items: center;
             justify-content: center;
         }
-
         .brand-crest::after {
             content: 'A';
             font-family: 'Courier New', monospace;
             font-weight: 900;
             font-size: 32px;
             color: var(--accent-gold);
-            letter-spacing: 0;
-            text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
         }
-
         h1 {
             font-size: 2.2rem;
             font-weight: 800;
-            color: var(--text-color);
             letter-spacing: 6px;
             margin-bottom: 8px;
             text-transform: uppercase;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
         }
-
         .subtitle {
             color: var(--accent-gold);
             font-size: 0.85rem;
             font-weight: 600;
             letter-spacing: 3px;
             text-transform: uppercase;
-            opacity: 0.9;
-            margin-bottom: 20px;
+            margin-bottom: 20px; 
         }
-
-        .audio-player-container {
-            background-color: rgba(15, 23, 42, 0.6);
+                .audio-player-container {
+            background-color: rgba(15, 23, 42, 0.7);
             border: 1px solid var(--border-color);
-            backdrop-filter: blur(12px);
             border-radius: 30px;
             padding: 12px 24px;
-            margin: 25px auto 0 auto;
+            margin: 20px auto 0 auto;
             max-width: 280px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
         }
-
-        .audio-info {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 600;
-        }
-
+        .audio-info { font-size: 0.8rem; color: var(--text-muted); font-weight: 600; letter-spacing: 1px; }
         .audio-btn {
-            background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+            background: #1e293b;
             border: 1px solid var(--accent-gold);
             color: var(--accent-gold);
             padding: 8px 18px;
             border-radius: 20px;
             font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
             font-weight: 700;
+            text-transform: uppercase;
             cursor: pointer;
-            transition: all 0.2s ease;
         }
-
-        .audio-btn:hover {
-            background: var(--accent-gold);
-            color: var(--bg-color);
-            box-shadow: 0 0 15px var(--gold-glow);
-        }
-
-        .manifesto-box {
+        .audio-btn:hover { background: var(--accent-gold); color: var(--bg-color); }
+        .manifesto-box, .extended-specs, .product-card {
             background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 40px;
-            margin-bottom: 35px;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .manifesto-box::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 4px;
-            height: 100%;
-            background: linear-gradient(to bottom, var(--accent-gold), #785c18);
-        }
-
-        .manifesto-box p {
-            margin-bottom: 20px;
-            font-size: 1.05rem;
-            color: #cbd5e1;
-            text-align: justify;
-        }
-
-        .manifesto-box p:last-child {
-            margin-bottom: 0;
-        }
-
-        .extended-specs {
-            background-color: var(--slate-deep);
             border: 1px solid var(--border-color);
             border-radius: 12px;
             padding: 35px;
-            margin-bottom: 45px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
         }
-
-        .extended-specs h2 {
+        .manifesto-box { border-left: 4px solid var(--accent-gold); }
+        .manifesto-box p { margin-bottom: 18px; font-size: 1.02rem; color: #cbd5e1; }
+        .manifesto-box p:last-child { margin-bottom: 0; }
+        .extended-specs { background-color: var(--slate-deep); }
+        .extended-specs h2, .catalog-headline {
             color: var(--accent-gold);
             font-size: 1.1rem;
-            font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 2px;
-            margin-bottom: 20px;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 12px;
+            margin-bottom: 18px;
         }
-
-        .extended-specs ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .extended-specs li {
-            margin-bottom: 16px;
-            color: #94a3b8;
-            font-size: 0.95rem;
-            padding-left: 20px;
-            position: relative;
-        }
-
-        .extended-specs li::before {
-            content: '▪';
-            position: absolute;
-            left: 0;
-            color: var(--accent-gold);
-        }
-
-        .catalog-headline {
-            text-align: center;
-            font-size: 1.2rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            color: var(--accent-gold);
-            margin: 40px 0 25px 0;
-            font-weight: 700;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 25px;
-            margin-bottom: 40px;
-        }
-
-        .product-card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 40px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            position: relative;
-            background: linear-gradient(180deg, var(--card-bg) 0%, rgba(11, 17, 32, 0.8) 100%);
-        }
-
-        .product-card::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            border-radius: 12px;
-            border: 1px solid transparent;
-            background: linear-gradient(180deg, var(--border-accent), transparent) border-box;
-            mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-            mask-composite: exclude;
-            pointer-events: none;
-        }
-
+        .catalog-headline { text-align: center; margin: 40px 0 25px 0; }
+        .extended-specs ul { list-style: none; }
+        .extended-specs li { margin-bottom: 14px; color: #94a3b8; font-size: 0.95rem; }
         .product-meta {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 15px;
             border-bottom: 1px solid var(--border-color);
-            padding-bottom: 15px;
+            padding-bottom: 12px;
+            margin-bottom: 15px;
         }
-
-        .product-title {
-            font-size: 1.15rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: var(--text-color);
-        }
-
-        .product-price {
-            font-size: 2rem;
-            color: var(--accent-gold);
-            font-weight: 800;
-            font-family: monospace;
-        }
-
-        .product-desc {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 30px;
-            text-align: justify;
-        }
-
+        .product-title { font-size: 1.1rem; font-weight: 700; text-transform: uppercase; }
+        .product-price { font-size: 1.8rem; color: var(--accent-gold); font-weight: 800; font-family: monospace; }
+        .product-desc { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 25px; }
         .btn {
             display: block;
             text-align: center;
-            background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+            background: #1e293b;
             color: var(--accent-gold);
             border: 1px solid var(--accent-gold);
-            padding: 16px 30px;
+            padding: 15px 25px;
             border-radius: 6px;
             text-decoration: none;
             text-transform: uppercase;
             letter-spacing: 2px;
             font-weight: 700;
             font-size: 0.9rem;
-            transition: all 0.2s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
-
-        .btn:hover {
-            background: var(--accent-gold);
-            color: var(--bg-color);
-            box-shadow: 0 0 20px var(--gold-glow);
-            transform: translateY(-1px);
-        }
-
-        footer {
-            text-align: center;
-            color: #475569;
-            font-size: 0.85rem;
-            margin-top: 80px;
-            border-top: 1px solid var(--border-color);
-            padding-top: 30px;
-        }
-
-        footer p:first-child {
-            color: var(--text-muted);
-            font-weight: 600;
-            margin-bottom: 6px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+        .btn:hover { background: var(--accent-gold); color: var(--bg-color); }
+        footer { text-align: center; color: #475569; font-size: 0.85rem; margin-top: 60px; border-top: 1px solid var(--border-color); padding-top: 25px; }
     </style>
-    <!-- Payhip Core Script Integration -->
-    <script type="text/javascript" src="https://payhip.com"></script>
 </head>
 <body>
-
     <div class="container">
+        <header>
+            <div class="brand-crest"></div>
+            <h1>AEIGIS</h1>
+            <div class="subtitle">Sovereignty • Resilience • One Love</div>
+            <audio id="bgPlayer" src="Restart.m4a" loop preload="auto"></audio>
+            <div class="audio-player-container">
+                <span class="audio-info">TRACK 1: RESTART</span>
+                <button id="audioToggle" class="audio-btn" onclick="toggleAudio()">Listen</button>
+            </div>
+        </header>
+
+        <section class="manifesto-box">
+            <p><strong>The Mainframe Crashed in Seattle. The Fortress Is Building in Central New York.</strong></p>
+            <p>In March 2026, a severe stroke left my left side paralyzed thousands of miles from home. I was living in Seattle, working on the front lines as a Counselor, dedicating my life and mind to holding space for people navigating deep personal transitions. When the emergency hit, I was completely alone. I could barely walk unassisted and moved back home to Central New York for family support.</p>
+            <p>I have done zero public fundraising or charity requests. I have simply been healing and scraping by since my work stopped in March and short-term disability ended in June. Now, I am earning my living directly through my talents by releasing the album people have asked for over the years.</p>
+            <p>Due to physical recovery constraints, live performances are roughly 18 months to 2 years out. If the demand is there and God clears me through Faith, I am fully committed to touring. Support my recovery, join the VIP fan club, and help build a platform to give back once I heal.</p>
+            <p>My paternal lineage carries the history of Palestinian refugee exile, and my spirit stands for universal human sovereignty. We reject geopolitical division. One Love is a structural necessity. Clean peace for every child of the soil across every border. Welcome to the shield.</p>
+        </section>
+
+        <section class="extended-specs">
+            <h2>Ecosystem Architecture Blueprint</h2>
+            <ul>
+                <li><strong>The Master LP Nodes:</strong> Immediate digital download of the full single "RESTART" plus a 10-second studio preview of "The Fourth King".</li>
+                <li><strong>The Resiliency Framework:</strong> Independent guidance manual built from real survival metrics, cognitive endurance, and mental autonomy.</li>
+                <li><strong>Platform Data Transparency:</strong> We turn off internal tracking and do not store your data on our end. We rely on trusted third-party software licenses to deliver these files securely today, with the long-term goal of complete self-hosted independence as we scale.</li>
+            </ul>
+        </section>
+        <div class="catalog-headline">Official Release Catalog</div>
+
+        <div class="product-card">
+            <div class="product-meta">
+                <div class="product-title">★ THE RESTART MASTER PACKAGE</div>
+                <div class="product-price">$4.44</div>
+            </div>
+            <p class="product-desc">Immediate digital download of the full single "RESTART", an exclusive 10-second studio preview of "The Fourth King", standalone instrumental loops, interactive lyrics sheets, and resiliency manifesto modules.</p>
+            <a href="https://payhip.com" class="btn" target="_blank">Secure Master Package</a>
+        </div>
+
+        <div class="product-card">
+            <div class="product-meta">
+                <div class="product-title">★ SOVEREIGN VIP FAN CLUB</div>
+                <div class="product-price">$4/mo | $40/yr</div>
+            </div>
+            <p class="product-desc">Unlocks monthly newsletters, breaking news, exclusive track drops, and prize entries. Reaching our first 100 annual members unlocks 1 full music video every week, voted on exclusively by you from the previous week's releases.</p>
+            <a href="https://payhip.com" class="btn" target="_blank">Join VIP Fan Club</a>
+        </div>
+
+        <div class="product-card">
+            <div class="product-meta">
+                <div class="product-title">★ THE SOVEREIGN EXECUTIVE NODE</div>
+                <div class="product-price">$444.00</div>
+            </div>
+            <p class="product-desc">Includes a personalized custom audio shout-out on an upcoming track, full VIP Fan Club access, and priority entry for 1-on-1 virtual meet sessions while I heal.</p>
+            <a href="https://payhip.com" class="btn" target="_blank">Secure Executive Node</a>
+        </div>
+
+        <footer>
+            <p>Enforced Data Transparency</p>
+            <p>Verify our perimeters at <strong>aeigis.org</strong> or <strong>aeigis.store</strong>. Follow @AEIGISOFFICIAL on X and YouTube.</p>
+        </footer>
+    </div>
+
+    <script>
+        function toggleAudio() {
+            var player = document.getElementById('bgPlayer');
+            var btn = document.getElementById('audioToggle');
+            if (player.paused) {
+                player.play();
+                btn.innerHTML = "Mute";
+            } else {
+                player.pause();
+                btn.innerHTML = "Listen";
+            }
+        }
+    </script>
+</body>
+</html>
+

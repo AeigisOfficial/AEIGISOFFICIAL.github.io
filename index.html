@@ -3,220 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AEIGIS | The Shield of Sovereignty</title>
+    <title>AEIGIS | KhaleelZ — The Shield of Sovereignty</title>
     <style>
         :root {
-            --bg-color: #05070f;
-            --text-color: #f8fafc;
-            --text-muted: #94a3b8;
-            --accent-gold: #d4af37;
-            --gold-glow: rgba(212, 175, 55, 0.15);
-            --slate-deep: #0f172a;
-            --card-bg: #0b1120;
-            --border-color: #1e293b;
+            --bg: #05070f; --text: #f8fafc; --muted: #94a3b8;
+            --gold: #d4af37; --card: #0b1120; --slate: #0f172a; --border: #1e293b;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
+            background: var(--bg); color: var(--text);
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            line-height: 1.6;
-            padding: 20px;
+            line-height: 1.6; padding: 20px;
         }
-        .container { max-width: 760px; margin: 0 auto; padding: 50px 0; }
-        header { text-align: center; margin-bottom: 50px; }
-        .brand-crest {
-            width: 80px;
-            height: 90px;
-            margin: 0 auto 24px auto;
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-            border: 2px solid var(--accent-gold);
+        .container { max-width: 760px; margin: 0 auto; padding: 40px 0; }
+        header { text-align: center; margin-bottom: 40px; }
+        .crest {
+            width: 76px; height: 86px; margin: 0 auto 20px;
+            background: linear-gradient(135deg, #1e293b, var(--slate));
+            border: 2px solid var(--gold);
             clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-            box-shadow: 0 0 30px var(--gold-glow);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: flex; align-items: center; justify-content: center;
         }
-        .brand-crest::after {
-            content: 'A';
-            font-family: 'Courier New', monospace;
-            font-weight: 900;
-            font-size: 32px;
-            color: var(--accent-gold);
+        .crest::after { content: 'A'; font: 900 30px 'Courier New', monospace; color: var(--gold); }
+        h1 { font-size: 2.1rem; font-weight: 800; letter-spacing: 6px; text-transform: uppercase; }
+        .sub { color: var(--gold); font-size: 0.85rem; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; margin: 8px 0 20px; }
+        .player {
+            background: rgba(15, 23, 42, 0.8); border: 1px solid var(--border);
+            border-radius: 30px; padding: 10px 22px; margin: 0 auto; max-width: 300px;
+            display: flex; align-items: center; justify-content: space-between;
         }
-        h1 {
-            font-size: 2.2rem;
-            font-weight: 800;
-            letter-spacing: 6px;
-            margin-bottom: 8px;
-            text-transform: uppercase;
+        .player span { font-size: 0.8rem; color: var(--muted); font-weight: 600; letter-spacing: 1px; }
+        .player button, .btn {
+            background: #1e293b; border: 1px solid var(--gold); color: var(--gold);
+            font-weight: 700; text-transform: uppercase; cursor: pointer; text-decoration: none;
         }
-        .subtitle {
-            color: var(--accent-gold);
-            font-size: 0.85rem;
-            font-weight: 600;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            margin-bottom: 20px; 
+        .player button { padding: 7px 16px; border-radius: 20px; font-size: 0.75rem; }
+        .player button:hover, .btn:hover { background: var(--gold); color: var(--bg); }
+        .box, .card {
+            background: var(--card); border: 1px solid var(--border);
+            border-radius: 12px; padding: 30px; margin-bottom: 24px;
         }
-                .audio-player-container {
-            background-color: rgba(15, 23, 42, 0.7);
-            border: 1px solid var(--border-color);
-            border-radius: 30px;
-            padding: 12px 24px;
-            margin: 20px auto 0 auto;
-            max-width: 280px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .audio-info { font-size: 0.8rem; color: var(--text-muted); font-weight: 600; letter-spacing: 1px; }
-        .audio-btn {
-            background: #1e293b;
-            border: 1px solid var(--accent-gold);
-            color: var(--accent-gold);
-            padding: 8px 18px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            cursor: pointer;
-        }
-        .audio-btn:hover { background: var(--accent-gold); color: var(--bg-color); }
-        .manifesto-box, .extended-specs, .product-card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 35px;
-            margin-bottom: 30px;
-        }
-        .manifesto-box { border-left: 4px solid var(--accent-gold); }
-        .manifesto-box p { margin-bottom: 18px; font-size: 1.02rem; color: #cbd5e1; }
-        .manifesto-box p:last-child { margin-bottom: 0; }
-        .extended-specs { background-color: var(--slate-deep); }
-        .extended-specs h2, .catalog-headline {
-            color: var(--accent-gold);
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 18px;
-        }
-        .catalog-headline { text-align: center; margin: 40px 0 25px 0; }
-        .extended-specs ul { list-style: none; }
-        .extended-specs li { margin-bottom: 14px; color: #94a3b8; font-size: 0.95rem; }
-        .product-meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 12px;
-            margin-bottom: 15px;
-        }
-        .product-title { font-size: 1.1rem; font-weight: 700; text-transform: uppercase; }
-        .product-price { font-size: 1.8rem; color: var(--accent-gold); font-weight: 800; font-family: monospace; }
-        .product-desc { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 25px; }
-        .btn {
-            display: block;
-            text-align: center;
-            background: #1e293b;
-            color: var(--accent-gold);
-            border: 1px solid var(--accent-gold);
-            padding: 15px 25px;
-            border-radius: 6px;
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 700;
-            font-size: 0.9rem;
-        }
-        .btn:hover { background: var(--accent-gold); color: var(--bg-color); }
-        footer { text-align: center; color: #475569; font-size: 0.85rem; margin-top: 60px; border-top: 1px solid var(--border-color); padding-top: 25px; }
+        .manifesto { border-left: 4px solid var(--gold); }
+        .manifesto p { margin-bottom: 16px; color: #cbd5e1; }
+        .manifesto p:last-child { margin-bottom: 0; }
+        .specs { background: var(--slate); }
+        .specs h2, .headline { color: var(--gold); font-size: 1.05rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 16px; }
+        .headline { text-align: center; margin: 36px 0 22px; }
+        .specs ul { list-style: none; }
+        .specs li { margin-bottom: 12px; color: var(--muted); font-size: 0.95rem; }
+        .meta { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--border); padding-bottom: 10px; margin-bottom: 14px; }
+        .title { font-size: 1.05rem; font-weight: 700; text-transform: uppercase; }
+        .price { font-size: 1.7rem; color: var(--gold); font-weight: 800; font-family: monospace; }
+        .desc { color: var(--muted); font-size: 0.95rem; margin-bottom: 20px; }
+        .btn { display: block; text-align: center; padding: 14px 20px; border-radius: 6px; letter-spacing: 2px; font-size: 0.85rem; }
+        footer { text-align: center; color: #475569; font-size: 0.85rem; margin-top: 50px; border-top: 1px solid var(--border); padding-top: 20px; }
     </style>
-</head>
-<body>
+</head><body>
     <div class="container">
         <header>
-            <div class="brand-crest"></div>
+            <div class="crest"></div>
             <h1>AEIGIS</h1>
-            <div class="subtitle">Sovereignty • Resilience • One Love</div>
-            <audio id="bgPlayer" src="Restart.m4a" loop preload="auto"></audio>
-            <div class="audio-player-container">
-                <span class="audio-info">TRACK 1: RESTART</span>
-                <button id="audioToggle" class="audio-btn" onclick="toggleAudio()">Listen</button>
+            <div class="sub">KhaleelZ • Sovereignty • Resilience • One Love</div>
+            <audio id="bgPlayer" src="MASTER_KhaleelZ_Unshaken.m4a" loop preload="auto"></audio>
+            <div class="player">
+                <span>SINGLE: UNSHAKEN</span>
+                <button id="audioToggle" onclick="toggleAudio()">Listen</button>
             </div>
         </header>
 
-        <section class="manifesto-box">
+        <section class="box manifesto">
             <p><strong>The Mainframe Crashed in Seattle. The Fortress Is Building in Central New York.</strong></p>
-            <p>In March 2026, a severe stroke left my left side paralyzed thousands of miles from home. I was living in Seattle, working on the front lines as a Counselor, dedicating my life and mind to holding space for people navigating deep personal transitions. When the emergency hit, I was completely alone. I could barely walk unassisted and moved back home to Central New York for family support.</p>
-            <p>I have done zero public fundraising or charity requests. I have simply been healing and scraping by since my work stopped in March and short-term disability ended in June. Now, I am earning my living directly through my talents by releasing the album people have asked for over the years.</p>
-            <p>Due to physical recovery constraints, live performances are roughly 18 months to 2 years out. If the demand is there and God clears me through Faith, I am fully committed to touring. Support my recovery, join the VIP fan club, and help build a platform to give back once I heal.</p>
-            <p>My paternal lineage carries the history of Palestinian refugee exile, and my spirit stands for universal human sovereignty. We reject geopolitical division. One Love is a structural necessity. Clean peace for every child of the soil across every border. Welcome to the shield.</p>
+            <p>Following a health event in 2026, relocation to Central New York initiated a transition toward independent music production as KhaleelZ, focusing on recovery, faith, and creative advocacy.</p>
+            <p>Support options include recovery backing, VIP fan club membership, and future community platforms rooted in universal human sovereignty and "One Love."</p>
         </section>
 
-        <section class="extended-specs">
+        <section class="box specs">
             <h2>Ecosystem Architecture Blueprint</h2>
             <ul>
-                <li><strong>The Master LP Nodes:</strong> Immediate digital download of the full single "RESTART" plus a 10-second studio preview of "The Fourth King".</li>
-                <li><strong>The Resiliency Framework:</strong> Independent guidance manual built from real survival metrics, cognitive endurance, and mental autonomy.</li>
-                <li><strong>Platform Data Transparency:</strong> We turn off internal tracking and do not store your data on our end. We rely on trusted third-party software licenses to deliver these files securely today, with the long-term goal of complete self-hosted independence as we scale.</li>
+                <li><strong>The Master LP Nodes:</strong> Digital downloads of "Unshaken" and "RESTART", official PDF lyric sheets, and instrumental loops.</li>
+                <li><strong>The Resiliency Framework:</strong> Independent guidance manual releasing January 2027 based on survival metrics and mental autonomy.</li>
+                <li><strong>Platform Data Transparency:</strong> Zero internal tracking with data protected via trusted third-party software licenses.</li>
             </ul>
         </section>
-        <div class="catalog-headline">Official Release Catalog</div>
+        <div class="headline">Official Release Catalog</div>
 
-        <div class="product-card">
-            <div class="product-meta">
-                <div class="product-title">★ THE RESTART MASTER PACKAGE</div>
-                <div class="product-price">$4.44</div>
+        <div class="card">
+            <div class="meta">
+                <span class="title">★ KhaleelZ — Unshaken (Video + Lyric Sheet)</span>
+                <span class="price">$4.00</span>
             </div>
-            <p class="product-desc">Immediate digital download of the full single "RESTART", an exclusive 10-second studio preview of "The Fourth King", standalone instrumental loops, interactive lyrics sheets, and resiliency manifesto modules.</p>
-            <a href="https://payhip.com" class="btn" target="_blank">Secure Master Package</a>
+            <p class="desc">Immediate digital download of the full HD studio video for "Unshaken" by KhaleelZ (91 BPM • F Minor) plus the official printable PDF lyric sheet.</p>
+            <a href="https://payhip.com" target="_blank" rel="noopener" class="btn">Download Video + Lyrics ($4.00)</a>
         </div>
 
-        <div class="product-card">
-            <div class="product-meta">
-                <div class="product-title">★ SOVEREIGN VIP FAN CLUB</div>
-                <div class="product-price">$4/mo | $40/yr</div>
+        <div class="card">
+            <div class="meta">
+                <span class="title">Dedicated Fan Membership</span>
+                <span class="price">$40/yr</span>
             </div>
-            <p class="product-desc">Unlocks monthly newsletters, breaking news, exclusive track drops, and prize entries. Reaching our first 100 annual members unlocks 1 full music video every week, voted on exclusively by you from the previous week's releases.</p>
-            <a href="https://payhip.com" class="btn" target="_blank">Join VIP Fan Club</a>
+            <p class="desc">Full annual catalog access, monthly newsletters, and weekly community voting on your next music video once our first 100 annual members lock in.</p>
+            <a href="https://payhip.com" target="_blank" rel="noopener" class="btn">Join Dedicated Fan Club</a>
         </div>
 
-        <div class="product-card">
-            <div class="product-meta">
-                <div class="product-title">★ THE SOVEREIGN EXECUTIVE NODE</div>
-                <div class="product-price">$444.00</div>
+        <div class="card">
+            <div class="meta">
+                <span class="title">Lifetime VIP Fan Node</span>
+                <span class="price">$444</span>
             </div>
-            <p class="product-desc">Includes a personalized custom audio shout-out on an upcoming track, full VIP Fan Club access, and priority entry for 1-on-1 virtual meet sessions while I heal.</p>
-            <a href="https://payhip.com" class="btn" target="_blank">Secure Executive Node</a>
+            <p class="desc">Permanent lifetime access to every future track and book release, a personalized custom audio shout-out on an upcoming track, and priority 1-on-1 virtual sessions.</p>
+            <a href="https://payhip.com" target="_blank" rel="noopener" class="btn">Secure Lifetime VIP</a>
         </div>
 
         <footer>
-            <p>Enforced Data Transparency</p>
-            <p>Verify our perimeters at <strong>aeigis.org</strong> or <strong>aeigis.store</strong>. Follow @AEIGISOFFICIAL on X and YouTube.</p>
+            Verify our perimeters at <strong>aeigis.org</strong>. Follow @AEIGISOFFICIAL on X and YouTube.<br>
+            © 2026 KhaleelZ / AEIGIS Media. All Rights Reserved.
         </footer>
     </div>
 
     <script>
         function toggleAudio() {
-            var player = document.getElementById('bgPlayer');
-            var btn = document.getElementById('audioToggle');
-            if (player.paused) {
-                player.play();
-                btn.innerHTML = "Mute";
-            } else {
-                player.pause();
-                btn.innerHTML = "Listen";
-            }
-        }<div class="card">
-  <div class="star">★ NEW RELEASE — KHALEEELZ</div>
-  <h3>UNSHAKEN — OFFICIAL STUDIO VIDEO + LYRIC SHEET</h3>
-  <div class="price">$4.00</div>
-  <p>Immediate digital download of the full HD studio video for "Unshaken" by KhaleelZ (91 BPM • F Minor) plus the official printable PDF lyric sheet.</p>
-  <a href="https://payhip.com" target="_blank" rel="noopener" class="btn">Download Video + Lyrics ($4.00)</a>
-</div>
-
-        
+            const p = document.getElementById('bgPlayer');
+            const b = document.getElementById('audioToggle');
+            if (p.paused) { p.play(); b.textContent = 'Pause'; }
+            else { p.pause(); b.textContent = 'Listen'; }
+        }
     </script>
 </body>
 </html>
